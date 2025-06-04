@@ -4,7 +4,9 @@ import { Nav } from "./nav";
 export const Header = () => {
   return (
     <div className="pl-8 pr-16 pt-8">
-      <h1 className="font-semibold text-title-lg">Dimitri Freitas</h1>
+      <h1 className="font-semibold text-title-lg text-blue-dark">
+        Dimitri Freitas
+      </h1>
       <div className="mb-4">
         <span className="px-2 py-1 rounded-[8px] bg-blue-main text-white-main">
           Desenvolvedor Front-end
