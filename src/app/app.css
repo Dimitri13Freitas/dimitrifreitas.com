@@ -14,7 +14,7 @@
 
   --color-black-main: #000000;
 
-  --animation-time: 2s;
+  --animation-time: 1s;
 
   --text-sm: 1rem;
   --text-md: 1.125rem;
@@ -58,6 +58,15 @@ strong {
 
 .anim .card-back {
   animation: swapCardBack var(--animation-time) forwards;
+}
+
+.anim .card-front > main {
+  opacity: 0;
+}
+
+.card-front > main {
+  transition: 0.8s;
+  opacity: 1;
 }
 
 @keyframes swapCardBack {

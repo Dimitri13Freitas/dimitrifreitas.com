@@ -13,7 +13,7 @@ export default function Page() {
           </h3>
           <div className="flex gap-3 ml-8">
             <div className="w-1 rounded-full bg-black-main/10"></div>
-            <div className="text-gray-main/70">
+            <div className="text-gray-main/70 py-1.5">
               <p>
                 <a
                   className="underline text-gray-main"
