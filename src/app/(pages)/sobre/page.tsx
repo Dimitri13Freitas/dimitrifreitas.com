@@ -55,7 +55,11 @@ export default function Page() {
       durationStr = `${durationObj.years} ano `;
     }
 
-    durationStr += `${durationObj.months} `;
+    if (durationObj.months && durationObj.months > 1) {
+      durationStr += `${durationObj.months} meses`;
+    } else if (durationObj.months === 1) {
+      durationStr += `${durationObj.months} mês`;
+    }
 
     return durationStr;
   };
