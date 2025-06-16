@@ -1,5 +1,5 @@
 import "./app.css";
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode } from "react";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 

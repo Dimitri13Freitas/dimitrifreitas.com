@@ -1,8 +1,13 @@
 const projects = [
   {
-    title: "Titulo do projeto teste",
-    desc: "Por enquanto sem descrição",
-    url: "www.dimitrifreitas.com",
+    title: "TaskDeck",
+    url: "https://task-deck.vercel.app/",
+    desc: "Aplicação para gerenciamento de tarefas no estilo kanban.",
+  },
+  {
+    title: "dimitrifreitas.com",
+    url: "https://dimitrifreitas.com/",
+    desc: "Meu portfólio.",
   },
 ];
 

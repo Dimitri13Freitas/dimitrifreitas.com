@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import React from "react";
+import React, { useEffect } from "react";
 
 interface AnchorProps {
   label: string;
@@ -11,6 +11,16 @@ export const Anchor = ({ label, path }: AnchorProps) => {
   const router = useRouter();
   const pathname = usePathname();
   const isActive = pathname === path;
+
+  useEffect(() => {
+    document.body.classList.remove("anim");
+  }, [pathname]);
+
+  function removeAnim() {
+    router.push(path);
+    document.body.removeEventListener("animationend", removeAnim);
+  }
+
   return (
     <li
       className={`flex group  ${
@@ -22,11 +32,6 @@ export const Anchor = ({ label, path }: AnchorProps) => {
         onClick={(e) => {
           e.preventDefault();
           document.body.classList.add("anim");
-          function removeAnim() {
-            router.push(path);
-            document.body.classList.remove("anim");
-            document.body.removeEventListener("animationend", removeAnim);
-          }
           document.body.addEventListener("animationend", removeAnim);
         }}
         href={path}

@@ -1,43 +1,50 @@
+"use client";
 import { Paragraph } from "@/app/components/paragraph";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { projects } from "../../data/projetos";
 
 export default function Page() {
+  const [pj, setPj] = useState(projects[0]);
+
+  function handleClick(i: number) {
+    setPj(projects[i]);
+  }
+
+  function renderAboutProject() {
+    return (
+      <div className="inline transition-all about rounded-lg w-96 p-4 text-white-main bg-linear-to-r from-blue-main to-blue-light">
+        <a
+          className="underline hover:no-underline"
+          href={pj.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {pj.title}
+        </a>
+        <Paragraph className="pt-6">{pj.desc}</Paragraph>
+      </div>
+    );
+  }
+
   return (
     <>
       <h2 className="text-title-md text-blue-dark mb-8">Projetos</h2>
       <section className="flex items-start gap-4">
-        <ul className="text-gray-main text-lg border-r-2 inline-block max-w-80 border-black/10 font-semibold">
-          <li className="text-blue-dark rounded-tl-lg rounded-bl-lg hover:bg-black/10 py-1.5 pl-3 pr-4 cursor-pointer transition-colors">
-            <span className="text-blue-light ">1. </span>Rei da Pradaria
-            Multiplayer
-          </li>
-          <li className="rounded-tl-lg rounded-bl-lg hover:bg-black/10 py-1.5 pl-3 pr-4 cursor-pointer transition-colors">
-            <span className="text-blue-light">2. </span>Titulo
-          </li>
-          <li className="rounded-tl-lg rounded-bl-lg hover:bg-black/10 py-1.5 pl-3 pr-4 cursor-pointer transition-colors">
-            <span className="text-blue-light">3. </span>Titulo
-          </li>
-          <li className="rounded-tl-lg rounded-bl-lg hover:bg-black/10 py-1.5 pl-3 pr-4 cursor-pointer transition-colors">
-            <span className="text-blue-light">4. </span>Titulo
-          </li>
-          <li className="rounded-tl-lg rounded-bl-lg hover:bg-black/10 py-1.5 pl-3 pr-4 cursor-pointer transition-colors">
-            <span className="text-blue-light">5. </span>Titulo
-          </li>
-          <li className="rounded-tl-lg rounded-bl-lg hover:bg-black/10 py-1.5 pl-3 pr-4 cursor-pointer transition-colors">
-            <span className="text-blue-light">6. </span>Titulo
-          </li>
+        <ul className="text-gray-main text-lg py-4 border-r-2 inline-block max-w-80 border-black/10 font-semibold">
+          {projects.map((e, i) => {
+            return (
+              <li
+                key={i}
+                onClick={() => handleClick(i)}
+                className="rounded-tl-lg rounded-bl-lg hover:bg-black/10 py-1.5 pl-3 pr-4 cursor-pointer transition-colors"
+              >
+                <span className="text-blue-light">{i + 1}. </span>
+                {e.title}
+              </li>
+            );
+          })}
         </ul>
-        <div className="inline rounded-lg w-96 p-4 text-white-main bg-linear-to-r from-blue-main to-blue-light">
-          <a
-            className="underline hover:no-underline"
-            href="https://dimitrifreitas.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            www.dimitrifreitas.com
-          </a>
-          <Paragraph className="pt-6">Por enquanto sem descrição</Paragraph>
-        </div>
+        {renderAboutProject()}
       </section>
     </>
   );
