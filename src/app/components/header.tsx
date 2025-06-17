@@ -8,7 +8,7 @@ export const Header = () => {
         Dimitri Freitas
       </h1>
       <div className="mb-4">
-        <span className="px-2 py-1 rounded-[8px] bg-blue-main text-white-main">
+        <span className="px-2 py-1 rounded-[8px] text-white-main bg-linear-to-r from-blue-main to-blue-light">
           Desenvolvedor Front-end
         </span>
       </div>

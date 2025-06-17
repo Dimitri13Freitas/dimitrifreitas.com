@@ -81,3 +81,24 @@ strong {
     rotate: 0;
   }
 }
+@keyframes swapCardBackMobile {
+  50% {
+    transform: translate(-2px, 10px);
+    rotate: -1deg;
+  }
+  100% {
+    transform: translate(10px, -10px);
+    background-color: var(--color-white-main);
+    rotate: 1deg;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Tailwind sm breakpoint */
+  .anim .card-back {
+    animation: swapCardBackMobile var(--animation-time) forwards;
+  }
+  .anim .card-front {
+    animation: swapCardBackMobile var(--animation-time) forwards;
+  }
+}

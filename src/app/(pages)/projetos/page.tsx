@@ -2,6 +2,7 @@
 import { Paragraph } from "@/app/components/paragraph";
 import React, { useEffect, useRef, useState } from "react";
 import { projects } from "../../data/projetos";
+import { Title } from "@/app/components/title";
 
 export default function Page() {
   const [pj, setPj] = useState(projects[0]);
@@ -28,8 +29,8 @@ export default function Page() {
 
   return (
     <>
-      <h2 className="text-title-md text-blue-dark mb-8">Projetos</h2>
-      <section className="flex items-start gap-4">
+      <Title>Projetos</Title>
+      <section className="flex items-start flex-wrap gap-4">
         <ul className="text-gray-main text-lg py-4 border-r-2 inline-block max-w-80 border-black/10 font-semibold">
           {projects.map((e, i) => {
             return (

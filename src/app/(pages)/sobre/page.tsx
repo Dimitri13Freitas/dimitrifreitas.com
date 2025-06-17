@@ -2,6 +2,8 @@ import { Paragraph } from "@/app/components/paragraph";
 import React from "react";
 import { parseISO, format, intervalToDuration } from "date-fns";
 import { carrerJobs } from "../../data/sobre";
+import { DownloadIcon } from "../../../../public/download";
+import { Title } from "@/app/components/title";
 
 export default function Page() {
   function renderJobItems() {
@@ -66,7 +68,7 @@ export default function Page() {
 
   return (
     <>
-      <h2 className="text-title-md text-blue-dark mb-8">Sobre</h2>
+      <Title>Sobre</Title>
       <Paragraph>
         Olá! Sou um desenvolvedor front-end apaixonado por criar interfaces
         modernas, interativas e funcionais. Tenho experiência com
@@ -91,7 +93,11 @@ export default function Page() {
         fazem a diferença. Se você busca um desenvolvedor comprometido e
         apaixonado por tecnologia, vamos conversar!
       </Paragraph>
-      <a className="bg-black-main/10 px-2.5 py-1.5 rounded-lg" href="">
+      <a
+        className="bg-black-main/10 px-2.5 py-1.5 rounded-lg text-white-main bg-linear-to-r from-blue-main to-blue-light"
+        href=""
+      >
+        <DownloadIcon />
         Download CV
       </a>
       <h2 className="text-title-md mt-16 mb-8 text-blue-dark">Carreira</h2>
