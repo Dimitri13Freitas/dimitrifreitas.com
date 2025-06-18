@@ -83,7 +83,6 @@ strong {
 }
 @keyframes swapCardBackMobile {
   50% {
-    /* transform: translateY(40px); */
     scale: none;
   }
   100% {
@@ -96,25 +95,36 @@ strong {
 @keyframes swapCardFrontMobile {
   50% {
     scale: 95%;
-
-    /* transform: translateY(-5px); */
   }
   100% {
     transform: translateY(-42px);
     scale: 95%;
-
     z-index: -10;
     background-color: var(--color-white-light);
-    /* transform: translateY(20px); */
   }
 }
 
 @media (max-width: 640px) {
-  /* Tailwind sm breakpoint */
-  .anim .card-back {
-    animation: swapCardBackMobile var(--animation-time) forwards;
+  @keyframes swapCardBack {
+    50% {
+      scale: none;
+    }
+    100% {
+      transform: translateY(40px);
+      z-index: 10;
+      scale: none;
+      background-color: var(--color-white-main);
+    }
   }
-  .anim .card-front {
-    animation: swapCardFrontMobile var(--animation-time) forwards;
+  @keyframes swapCardFront {
+    50% {
+      scale: 95%;
+    }
+    100% {
+      transform: translateY(-42px);
+      scale: 95%;
+      z-index: -10;
+      background-color: var(--color-white-light);
+    }
   }
 }
