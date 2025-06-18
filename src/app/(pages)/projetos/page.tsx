@@ -13,7 +13,7 @@ export default function Page() {
 
   function renderAboutProject() {
     return (
-      <div className="inline transition-all about rounded-lg w-96 p-4 text-white-main bg-linear-to-r from-blue-main to-blue-light">
+      <div className="inline transition-all about rounded-lg w-96 p-4 text-white-dark bg-linear-to-r from-blue-main to-blue-light">
         <a
           className="underline hover:no-underline"
           href={pj.url}
@@ -22,7 +22,7 @@ export default function Page() {
         >
           {pj.title}
         </a>
-        <Paragraph className="pt-6">{pj.desc}</Paragraph>
+        <Paragraph className="mt-6">{pj.desc}</Paragraph>
       </div>
     );
   }

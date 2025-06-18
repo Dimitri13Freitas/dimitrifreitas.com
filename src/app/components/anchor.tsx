@@ -17,8 +17,10 @@ export const Anchor = ({ label, path }: AnchorProps) => {
   }, [pathname]);
 
   function removeAnim() {
-    router.push(path);
-    document.body.removeEventListener("animationend", removeAnim);
+    if (path !== pathname) {
+      router.push(path);
+      document.body.removeEventListener("animationend", removeAnim);
+    }
   }
 
   return (
@@ -31,8 +33,10 @@ export const Anchor = ({ label, path }: AnchorProps) => {
         className="flex flex-col-reverse md:flex-row md:items-center gap-1"
         onClick={(e) => {
           e.preventDefault();
-          document.body.classList.add("anim");
-          document.body.addEventListener("animationend", removeAnim);
+          if (path !== pathname) {
+            document.body.classList.add("anim");
+            document.body.addEventListener("animationend", removeAnim);
+          }
         }}
         href={path}
       >
