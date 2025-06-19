@@ -81,6 +81,7 @@ strong {
     rotate: 0;
   }
 }
+
 @keyframes swapCardBackMobile {
   50% {
     scale: none;
@@ -105,6 +106,15 @@ strong {
 }
 
 @media (max-width: 640px) {
+  .anim .card-back {
+    animation: swapCardBackMobile var(--animation-time) forwards;
+  }
+  .anim .card-front {
+    animation: swapCardFrontMobile var(--animation-time) forwards;
+  }
+}
+
+/* @media (max-width: 640px) {
   @keyframes swapCardBack {
     50% {
       scale: none;
@@ -127,4 +137,4 @@ strong {
       background-color: var(--color-white-light);
     }
   }
-}
+} */
