@@ -99,8 +99,8 @@ strong {
   }
   100% {
     transform: translateY(-42px);
-    scale: 95%;
     z-index: -10;
+    scale: 95%;
     background-color: var(--color-white-light);
   }
 }
@@ -113,28 +113,3 @@ strong {
     animation: swapCardFrontMobile var(--animation-time) forwards;
   }
 }
-
-/* @media (max-width: 640px) {
-  @keyframes swapCardBack {
-    50% {
-      scale: none;
-    }
-    100% {
-      transform: translateY(40px);
-      z-index: 10;
-      scale: none;
-      background-color: var(--color-white-main);
-    }
-  }
-  @keyframes swapCardFront {
-    50% {
-      scale: 95%;
-    }
-    100% {
-      transform: translateY(-42px);
-      scale: 95%;
-      z-index: -10;
-      background-color: var(--color-white-light);
-    }
-  }
-} */
