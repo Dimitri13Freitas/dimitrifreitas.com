@@ -27,7 +27,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               <div className="bg-white-main h-screen md:h-full overflow-y-auto pt-7 px-8 pb-4 md:px-16 md:py-2 md:pt-9 rounded-t-3xl md:rounded-tl-3xl md:rounded-tr-none card-front shadow">
                 <main className="max-w-[740px]">{children}</main>
               </div>
-              <div className="bg-white-light  h-screen md:h-full w-full px-16 py-9 -translate-y-10 md:-translate-x-5 md:translate-y-5 shadow absolute top-0 rounded-t-3xl md:rounded-tl-3xl md:rounded-tr-none card-back md:scale-none scale-95"></div>
+              <div className="bg-white-light  h-screen md:h-full w-full px-16 py-9 -translate-y-10 md:-translate-x-5 md:translate-y-5 shadow absolute top-0 rounded-t-3xl md:rounded-tl-3xl md:rounded-tr-none card-back"></div>
             </div>
           </div>
         </div>

@@ -89,7 +89,7 @@ strong {
   100% {
     transform: translateY(40px);
     z-index: 10;
-    scale: 95%; /* testando att animação, rodar local antes porra */
+    scale: none; /* testando att animação, rodar local antes porra */
     background-color: var(--color-white-main);
   }
 }
@@ -106,6 +106,9 @@ strong {
 }
 
 @media (max-width: 640px) {
+  .card-back {
+    scale: 95%;
+  }
   .anim .card-back {
     animation: swapCardBackMobile var(--animation-time) forwards;
   }
