@@ -89,7 +89,7 @@ strong {
   100% {
     transform: translateY(40px);
     z-index: 10;
-    scale: none;
+    scale: 95%; /* testando att animação, rodar local antes porra */
     background-color: var(--color-white-main);
   }
 }
