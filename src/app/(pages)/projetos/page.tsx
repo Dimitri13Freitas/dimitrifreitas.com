@@ -1,6 +1,6 @@
 "use client";
 import { Paragraph } from "@/app/components/paragraph";
-import React, { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { projects } from "../../data/projetos";
 import { Title } from "@/app/components/title";
 
@@ -11,18 +11,34 @@ export default function Page() {
     setPj(projects[i]);
   }
 
-  function renderAboutProject() {
+  function renderAboutProject(project: typeof pj) {
     return (
       <div className="inline transition-all about rounded-lg w-96 p-4 text-white-dark bg-linear-to-r from-blue-main to-blue-light">
         <a
           className="underline hover:no-underline"
-          href={pj.url}
+          href={project.url}
           target="_blank"
           rel="noopener noreferrer"
         >
-          {pj.title}
+          {project.title}
         </a>
-        <Paragraph className="mt-6">{pj.desc}</Paragraph>
+        <Paragraph className="mt-5">{project.desc}</Paragraph>
+        {project.tools && (
+          <>
+            <div className="mt-3 flex gap-[5px] flex-wrap">
+              {project.tools.tech.map((e, i) => (
+                <span key={i} className="text-white-dark opacity-50">
+                  #{e}
+                </span>
+              ))}
+            </div>
+            <div className="mt-3">
+              <span className="text-white-dark opacity-65">
+                @deploy on {project.tools.deploy}
+              </span>
+            </div>
+          </>
+        )}
       </div>
     );
   }
@@ -45,7 +61,7 @@ export default function Page() {
             );
           })}
         </ul>
-        {renderAboutProject()}
+        {renderAboutProject(pj)}
       </section>
     </>
   );

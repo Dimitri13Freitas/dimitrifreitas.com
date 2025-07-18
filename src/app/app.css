@@ -95,7 +95,7 @@ strong {
 }
 @keyframes swapCardFrontMobile {
   50% {
-    scale: none;
+    scale: 95%;
   }
   100% {
     transform: translateY(-42px);
