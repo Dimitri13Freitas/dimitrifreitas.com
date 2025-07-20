@@ -58,6 +58,7 @@ strong {
 
 .anim .card-back {
   animation: swapCardBack var(--animation-time) forwards;
+  width:100vw;
 }
 
 .anim .card-front > main {
