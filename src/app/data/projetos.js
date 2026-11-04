@@ -19,7 +19,7 @@ const projects = [
   },
   {
     title: "DR Construtora",
-    url: "https://grupodr.com.br/gr",
+    url: "https://grupodr.com.br",
     desc: "Você esta aqui!",
   },
 ];
