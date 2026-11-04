@@ -1,10 +1,10 @@
 const projects = [
   {
-    title: "TaskDeck",
-    url: "https://task-deck.vercel.app/",
-    desc: "Aplicação para gerenciamento de tarefas no estilo kanban.",
+    title: "DR Construtora",
+    url: "https://grupodr.com.br",
+    desc: "Website institucional desenvolvido para o Grupo DR Construtora.",
     tools: {
-      tech: ["vite", "tailwindcss", "supabase"],
+      tech: ["css", "wordpress", "php"],
       deploy: "vercel",
     },
   },
@@ -18,9 +18,13 @@ const projects = [
     },
   },
   {
-    title: "DR Construtora",
-    url: "https://grupodr.com.br",
-    desc: "Você esta aqui!",
+    title: "Plataforma QPZ",
+    url: "https://www.elevareqpz.com.br/",
+    desc: "Plataforma de cursos para empresa de RH",
+    tools: {
+      tech: ["nextjs", "tailwindcss", "shad/cn", "laravel"],
+      deploy: "vercel",
+    },
   },
 ];
 
