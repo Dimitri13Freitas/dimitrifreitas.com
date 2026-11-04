@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <div className="flex flex-col md:flex-row mt-0 md:mt-16 w-full realtive">
             <Header />
             <div className="w-full relative z-10 mt-2 md:mt-0">
-              <div className="bg-white-main h-screen md:h-[101vh] overflow-y-auto pt-7 px-8 pb-4 md:px-16 md:py-2 md:pt-9 rounded-t-3xl md:rounded-tl-3xl md:rounded-tr-none card-front shadow">
+              <div className="bg-white-main h-screen md:h-[101vh] overflow-y-auto pt-7 px-8 pb-80 md:px-16 md:py-2 md:pt-9 rounded-t-3xl md:rounded-tl-3xl md:rounded-tr-none card-front shadow">
                 <main className="max-w-[740px]">{children}</main>
               </div>
               <div className="bg-white-light  h-screen md:h-full w-[101vw] px-16 py-9 -translate-y-10 md:-translate-x-5 md:translate-y-5 shadow absolute top-0 rounded-t-3xl md:rounded-tl-3xl md:rounded-tr-none card-back"></div>
